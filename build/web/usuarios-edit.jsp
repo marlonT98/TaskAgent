@@ -1,4 +1,4 @@
-<%@page import="java.time.LocalDate"%>
+<%@page import="java.time.LocalDateTime"%>
 <%@page import="java.time.format.DateTimeFormatter"%>
 <%@page import="Entity.UsuarioEntity"%>
 <%@page import="Logic.UsuarioBL"%>
@@ -17,7 +17,7 @@
 
     // Acción CREATE: Inicializar un usuario vacío
     if ("CREATE".equalsIgnoreCase(miAccion)) {
-        
+
         usuario.setNombre("");
         usuario.setEmail("");
         usuario.setPassword("");
@@ -30,42 +30,64 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <%@include file="includecss.jsp" %>
-        <title><%= "Editar Usuario" %></title>
+        <%@include file="includecss.jsp"%>
+        <title><%= "Editar Usuario"%></title>
     </head>
     <body>
-        <h1>Usuario</h1>
-        <form method="POST" action="usuarios-list.jsp">
-            
-           <input type="hidden"  name="accion" value="<%=miAccion%>" >
-           <input type="hidden" name="id" value="<%=usuario.getId_usuario()%>">
-          
+         <div id="wrapper">
+            <%@include file="includenavbar.jsp"%>
+            <div id="page-wrapper" class="gray-bg"> 
+                <%@include file="includenavbarheader.jsp"%>  
+                <%@include file="includepageheading.jsp"%> 
 
-            <label> Nombre:</label>
-            <input type="text" class="form-control" name="nombre" value="<%=usuario.getNombre() %>">
+                <div class="wrapper wrapper-content animated fadeInRight">
 
-            <label> Email:</label>
-            <input type="email" class="form-control" name="email" value="<%=usuario.getEmail() %>">
+                    <div class="row"> 
+                        <div class="col-lg-6 offset-lg-3">
+                        <div class="ibox ">
+                            <div class="ibox-content">
+                                    <form method="POST" action="usuarios-list.jsp">
 
-            <label> Password:</label>
-            <input type="text" class="form-control" name="password" value="<%=usuario.getPassword() %>">
+                                        <input type="hidden"  name="accion" value="<%=miAccion%>" >
+                                        <input type="hidden" name="id" value="<%=usuario.getId_usuario()%>">
 
-            <label>Fecha de creación:</label>
-            <input type="date" class="form-control" name="fecha_creacion"
-                   value="<%=usuario.getFecha_creacion() %>">
 
-            <label>Último acceso:</label>
-            <input type="date" class="form-control" name="fecha_ultimo_acceso"
-                   value="<%=usuario.getFecha_ultimo_acceso() %>">
+                                        <label> Nombre:</label>
+                                        <input type="text" class="form-control" name="nombre" value="<%=usuario.getNombre()%>">
 
-            <button type="submit" value="guardar" class="btn btn-primary">
-                <i class="fa-solid fa-save"></i> Guardar
-            </button>
-            <button type="reset" value="limpiar" class="btn btn-danger">
-                <i class="fa-regular fa-circle-check"></i> Limpiar
-            </button>
-        </form>
+                                        <label> Email:</label>
+                                        <input type="email" class="form-control" name="email" value="<%=usuario.getEmail()%>">
 
-        <%@include file="includejs.jsp" %>
+                                        <label> Password:</label>
+                                        <input type="text" class="form-control" name="password" value="<%=usuario.getPassword()%>">
+
+                                        <label>Fecha de creación:</label>
+                                        <input type="date" class="form-control" name="fecha_creacion"
+                                               value="<%=usuario.getFecha_creacion()%>">
+
+                                        <label>Último acceso:</label>
+                                        <input type="date" class="form-control" name="fecha_ultimo_acceso"
+                                               value="<%=usuario.getFecha_ultimo_acceso()%>">
+
+                                        <button type="submit" value="guardar" class="btn btn-primary">
+                                            <i class="fa-solid fa-save"></i> Guardar
+                                        </button>
+                                        <button type="reset" value="limpiar" class="btn btn-danger">
+                                            <i class="fa-regular fa-circle-check"></i> Limpiar
+                                        </button>
+                                    </form>
+                                </div>
+                                        </div>
+                        </div>
+
+                                        
+
+                      </div>
+                       </div>
+                                 <%@include file="includefooter.jsp" %>
+                  </div>
+           </div>
+
+          <%@include file="includejs.jsp" %>
     </body>
 </html>
