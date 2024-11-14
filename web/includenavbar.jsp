@@ -43,7 +43,7 @@
                     <a href="#"><i class="fa fa-table"></i> <span class="nav-label">Tablas</span><span class="fa arrow"></span></a>
                     <ul class="nav nav-second-level collapse">
                         <li><a href="usuarios-list.jsp">Usuarios</a></li>
-                        <li><a href="table_data_tables.html">Data Tables</a></li>
+                        <li><a href="tarea-list.jsp">Tareas</a></li>
                         <li><a href="table_foo_table.html">Foo Tables</a></li>
 
                     </ul>

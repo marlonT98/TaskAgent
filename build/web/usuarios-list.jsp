@@ -105,6 +105,7 @@
                                                 <thead>
                                                     <tr>
                                                         <th>Acciones</th>
+                                                        <th>Identificador</th>
                                                         <th>Nombre</th>
                                                         <th>Email</th>
                                                         <th>Password</th>
@@ -123,6 +124,7 @@
                                                             out.write("<a class='btn btn-danger' href='usuarios-list.jsp?accion=DELETE&id=" + item.getId_usuario() + "'><i class='fa-solid fa-trash'></i><a/>");
                                                             out.write("</td>");
 
+                                                            out.write("<td>" + item.getId_usuario() + "</td>");
                                                             out.write("<td>" + item.getNombre() + "</td>");
                                                             out.write("<td>" + item.getEmail() + "</td>");
                                                             out.write("<td>" + item.getPassword() + "</td>");
@@ -142,10 +144,10 @@
 
                                             </div>
                                             </div>
-                                                    <%@include file="includefooter.jsp" %>
+                                            <%@include file="includefooter.jsp" %>
                                             </div>
                                             </div>
 
-                                                    <%@include file="includejs.jsp" %>
+                                            <%@include file="includejs.jsp" %>
                                             </body>
                                             </html>
