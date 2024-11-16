@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * DAO para operaciones CRUD sobre las tareas.
  */
-public class TareaDao extends ConexionMySQL {
+public class TareaDao extends ConexionMySQL implements IBaseDao<TareaEntity>{
 
     // Método para mapear un ResultSet a una entidad TareaEntity
   private TareaEntity mapResultSetToTarea(ResultSet rs) throws SQLException {
@@ -46,6 +46,7 @@ public class TareaDao extends ConexionMySQL {
 
 
     // Obtener todas las tareas
+  @Override
     public List<TareaEntity> readAll() {
         List<TareaEntity> lstTareas = new ArrayList<>();
         String SQL = "SELECT * FROM tareas";
@@ -60,6 +61,7 @@ public class TareaDao extends ConexionMySQL {
     }
 
     // Insertar una nueva tarea
+  @Override
     public boolean insert(TareaEntity tarea) {
         String sql = "INSERT INTO tareas (fk_usuario, titulo, descripcion, fecha_creacion, fecha_vencimiento, estado, prioridad) VALUES (?, ?, ?, ?, ?, ?, ?)";
         try (PreparedStatement pst = getConexion().prepareStatement(sql)) {
@@ -78,6 +80,7 @@ public class TareaDao extends ConexionMySQL {
     }
 
     // Actualizar una tarea existente
+  @Override
     public boolean update(TareaEntity tarea) {
         String sql = "UPDATE tareas SET fk_usuario = ?, titulo = ?, descripcion = ?, fecha_creacion = ?, fecha_vencimiento = ?, estado = ?, prioridad = ? WHERE id_tarea = ?";
         try (PreparedStatement pst = getConexion().prepareStatement(sql)) {
@@ -97,6 +100,7 @@ public class TareaDao extends ConexionMySQL {
     }
 
     // Eliminar una tarea
+  @Override
     public boolean delete(String id) {
         String sql = "DELETE FROM tareas WHERE id_tarea = ?";
         try (PreparedStatement pst = getConexion().prepareStatement(sql)) {

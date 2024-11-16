@@ -9,12 +9,13 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UsuarioDao extends ConexionMySQL {
+public class UsuarioDao extends ConexionMySQL  implements IBaseDao<UsuarioEntity>{
 
     public UsuarioDao() {
     }
 
     // Método para listar todos los usuarios
+    @Override
     public List<UsuarioEntity> readAll() {
         List<UsuarioEntity> lstUsuarios = new ArrayList<>();
 
@@ -44,6 +45,7 @@ public class UsuarioDao extends ConexionMySQL {
     }
 
     // Método para eliminar un usuario por ID
+    @Override
     public boolean delete(String id) {
         boolean result = false;
 
@@ -86,6 +88,7 @@ public class UsuarioDao extends ConexionMySQL {
     }
 
     //metodo para registrar o crear
+    @Override
     public boolean insert(UsuarioEntity item) {
 
         boolean result = false;
@@ -114,7 +117,8 @@ public class UsuarioDao extends ConexionMySQL {
     }
 
     // Método para listar un usuario por código
-    public UsuarioEntity readByCodigo(String c) {
+    @Override
+    public UsuarioEntity readById(String c) {
         UsuarioEntity item = null; // Inicia como null para manejar cuando no se encuentre un usuario
 
         String sql = "SELECT * FROM usuarios WHERE id_usuario= ?";
