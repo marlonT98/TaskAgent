@@ -3,11 +3,20 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Marlon/OneDrive/Escritorio/TaskAgent/src/java/Logic/TareaBL.java</file>
-            <file>file:/C:/Users/Marlon/OneDrive/Escritorio/TaskAgent/web/tarea-edit.jsp</file>
-            <file>file:/C:/Users/Marlon/OneDrive/Escritorio/TaskAgent/src/java/DataAccesObject/TareaDao.java</file>
-            <file>file:/C:/Users/Marlon/OneDrive/Escritorio/TaskAgent/src/java/Entity/TareaEntity.java</file>
-            <file>file:/C:/Users/Marlon/OneDrive/Escritorio/TaskAgent/web/tarea-list.jsp</file>
+            <file>file:/C:/Proyectos/TaskAgent/src/java/Logic/TareaBL.java</file>
+            <file>file:/C:/Proyectos/TaskAgent/src/java/Entity/TrabajadorEntity.java</file>
+            <file>file:/C:/Proyectos/TaskAgent/src/java/DataAccesObject/DetalleVentaDAO.java</file>
+            <file>file:/C:/Proyectos/TaskAgent/src/java/Entity/ProductoEntity.java</file>
+            <file>file:/C:/Proyectos/TaskAgent/src/java/Entity/VentaEntity.java</file>
+            <file>file:/C:/Proyectos/TaskAgent/src/java/DataAccesObject/VentaDAO.java</file>
+            <file>file:/C:/Proyectos/TaskAgent/src/java/Entity/DetalleVentaEntity.java</file>
+            <file>file:/C:/Proyectos/TaskAgent/src/java/Logic/UsuarioBL.java</file>
+            <file>file:/C:/Proyectos/TaskAgent/src/java/Entity/ClienteEntity.java</file>
+            <file>file:/C:/Proyectos/TaskAgent/src/java/DataAccesObject/ProductoDAO.java</file>
+            <file>file:/C:/Proyectos/TaskAgent/src/java/DataAccesObject/TrabajadorDAO.java</file>
+            <file>file:/C:/Proyectos/TaskAgent/src/java/DataAccesObject/ConexionMySQL.java</file>
+            <file>file:/C:/Proyectos/TaskAgent/src/java/DataAccesObject/ClienteDAO.java</file>
+            <file>file:/C:/Proyectos/TaskAgent/src/java/DataAccesObject/IBaseDao.java</file>
         </group>
     </open-files>
 </project-private>
